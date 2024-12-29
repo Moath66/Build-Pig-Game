@@ -1,0 +1,83 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
+  font-weight: normal; /*it could be normal (400) , or bold (700) */
+  color: #333;
+  background-image: linear-gradient(to bottom left, blue 0%, yellow 100%);
+  height: 100vh; /* vh provide full-page gradient background */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* LAYOUT */
+
+main {
+  position: relative;
+  width: 100rem;
+  height: 60rem;
+  background-color: rgba(250, 8, 8, 0.35);
+  backdrop-filter: blur(
+    200px
+  ); /*used to apply a visual effect to the area (behind an elemen), creating a blurred background. */
+  filter: blur(); /*used to apply a visual effect (directly to an elemen)*/
+  box-shadow: 0 3rem 5rem rgb(19, 10, 10);
+  border-radius: 9px;
+  overflow: hidden; /* any content that goes beyond the element’s box is "hidden */
+  display: flex;
+}
+
+.player {
+  flex: 50%;
+  padding: 9rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: all 0.75s;
+}
+
+/* ELEMENTS */
+.name {
+  position: relative;
+  font-size: 4rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  word-spacing: 2px;
+  font-weight: 300;
+  margin-bottom: 1rem;
+}
+
+.score {
+  font-size: 8rem;
+  font-weight: 300;
+  color: white;
+  margin-bottom: auto;
+}
+
+.player--active {
+  background-color: rgba(250, 8, 8, 0.4);
+}
+
+.player--active .name {
+  font-weight: 700;
+}
+
+.player--active .score {
+  font-weight: 400;
+}
+
+.player--active .current {
+  opacity: 1;
+}
